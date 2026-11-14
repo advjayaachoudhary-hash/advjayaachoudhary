@@ -77,7 +77,7 @@
             </div>
             
             <div class="pt-4 border-t border-slate-100 flex flex-col sm:flex-row gap-3 justify-end items-center">
-                <button onclick="acceptDisclaimer()" class="w-full sm:w-auto px-8 py-3 bg-navy-900 hover:bg-navy-800 text-gold-400 font-semibold rounded-lg shadow-md transition-all duration-200 border border-gold-500/30 text-center cursor-pointer">
+                <button type="button" onclick="acceptDisclaimer()" class="w-full sm:w-auto px-8 py-3 bg-navy-900 hover:bg-navy-800 text-gold-400 font-semibold rounded-lg shadow-md transition-all duration-200 border border-gold-500/30 text-center cursor-pointer">
                     I Agree & Proceed
                 </button>
             </div>
@@ -468,7 +468,7 @@
         function acceptDisclaimer() {
             const modal = document.getElementById('disclaimerModal');
             if (modal) {
-                modal.style.display = 'none';
+                modal.remove(); // Completely removes the modal from the webpage structure
             }
         }
 
